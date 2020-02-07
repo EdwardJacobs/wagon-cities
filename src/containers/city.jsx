@@ -1,9 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import SelectCity from '../actions/index';
 
 const City = (props) => {
   return (
-    <li className="list-group-item">{props.city.name}</li>
+    <li
+      className="list-group-item"
+      onClick={() => props.SelectCity(props.city)}
+    >{props.city.name}</li>
   );
 };
 
-export default City;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectCity }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(City);

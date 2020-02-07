@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import City from './city';
+import City from '../containers/city';
 
 class CityList extends Component {
   renderList() {
     return this.props.cities.map((city) => {
-      return <City city={city} key={city.name} />;
+      return (
+        <City city={city} key={city.name} />
+      );
     });
   }
   render() {
