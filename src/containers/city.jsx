@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import SelectCity from '../actions/index';
+import selectCity from '../actions/index';
 
 const City = (props) => {
   return (
     <li
       className="list-group-item"
-      onClick={() => props.SelectCity(props.city)}
+      onClick={() => props.selectCity(props.city)}
     >{props.city.name}</li>
   );
 };
