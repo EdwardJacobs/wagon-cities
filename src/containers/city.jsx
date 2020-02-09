@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
 import selectCity from '../actions/index';
 
 const City = (props) => {
@@ -9,7 +8,9 @@ const City = (props) => {
     <li
       className="list-group-item"
       onClick={() => props.selectCity(props.city)}
-    >{props.city.name}</li>
+    >
+      {props.city.name}
+    </li>
   );
 };
 
