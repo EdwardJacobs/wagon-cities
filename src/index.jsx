@@ -11,8 +11,5 @@ import '../assets/stylesheets/application.scss';
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+  <App />, document.getElementById('root')
 );
