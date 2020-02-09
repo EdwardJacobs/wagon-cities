@@ -1,6 +1,6 @@
 export default function selectCity(city) {
   return {
-    type: 'SELECT_CITY',
+    type: 'CITY_SELECTED',
     payload: city
   };
 }
