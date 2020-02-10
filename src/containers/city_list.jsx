@@ -5,7 +5,9 @@ import City from './city';
 class CityList extends Component {
   renderList() {
     return this.props.cities.map((city) => {
-      return <City key={city.name} city={city} />;
+      return (
+        <City key={city.name} city={city} />
+      );
     });
   }
   render() {
@@ -20,7 +22,7 @@ class CityList extends Component {
 function mapStateToProps(state) {
   return {
     cities: state.cities
-  };
+  }
 }
 
 export default connect(mapStateToProps)(CityList);
